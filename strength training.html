@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strength Training</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #000428, #004e92);
+            color: white;
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        header {
+            padding: 20px;
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+        }
+
+        .training-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card:nth-child(1) {
+            background-image: url('p1.jpeg');
+        }
+        .card:nth-child(2) {
+            background-image: url('https://source.unsplash.com/300x200/?intermediate,fitness');
+        }
+        .card:nth-child(3) {
+            background-image: url('https://source.unsplash.com/300x200/?advanced,strength');
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .price {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .enroll-btn {
+            display: inline-block;
+            padding: 10px 15px;
+            color: white;
+            background: rgba(0, 78, 146, 0.9);
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .enroll-btn:hover {
+            background: rgba(0, 4, 40, 0.9);
+        }
+
+        @media (max-width: 768px) {
+            .training-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="training-cards">
+            <div class="card">
+                <h2>Beginner Strength Training</h2>
+                <p>A perfect start for those new to strength training.</p>
+                <p class="price">Price: ₹<span contenteditable="true">499</span></p>
+                <a href="https://forms.gle/a33Kwy1vDXnYgsaeA" target="_blank" class="enroll-btn">Enroll Now</a>
+            </div>
+            <div class="card">
+                <h2>Intermediate Strength Training</h2>
+                <p>Take your strength training to the next level.</p>
+                <p class="price">Price: ₹<span contenteditable="true">799</span></p>
+                <a href="https://forms.gle/example" target="_blank" class="enroll-btn">Enroll Now</a>
+            </div>
+            <div class="card">
+                <h2>Advanced Strength Training</h2>
+                <p>For those who want to push their limits.</p>
+                <p class="price">Price: ₹<span contenteditable="true">999</span></p>
+                <a href="https://forms.gle/example" target="_blank" class="enroll-btn">Enroll Now</a>
+            </div>
+            <div class="card">
+                <h2>Advanced Strength Training</h2>
+                <p>For those who want to push their limits.</p>
+                <p class="price">Price: ₹<span contenteditable="true">999</span></p>
+                <a href="https://forms.gle/example" target="_blank" class="enroll-btn">Enroll Now</a>
+            </div>
+            <div class="card">
+                <h2>Advanced Strength Training</h2>
+                <p>For those who want to push their limits.</p>
+                <p class="price">Price: ₹<span contenteditable="true">999</span></p>
+                <a href="https://forms.gle/example" target="_blank" class="enroll-btn">Enroll Now</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

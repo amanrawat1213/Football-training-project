@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coach Akshit Negi</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background-color: #000;
+        }
+
+        header {
+            background: url('background.png') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 10px;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .content-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: rgb(109, 97, 180);
+            background-image: url();
+            /* backdrop-filter: blur(10px); */
+            border-radius: 15px;
+            padding: 20px;
+            /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(180, 4, 4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 50vh;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .videos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-top: 56.25%;
+            /* 16:9 Aspect Ratio */
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        form {
+            display: grid;
+            gap: 15px;
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        label {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            color: black;
+        }
+
+        input,
+        textarea,
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        #social-media {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            margin-top: 20px;
+        }
+
+        #social-media h2 {
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .social-icon {
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .social-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 10%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(153, 9, 9, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="hero">
+            <h1>Coach Akshit Negi</h1>
+            <p>Your Fitness Journey Starts Here!</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#diet-plans">Diet Plans</a></li>
+            <li><a href="#training-sessions">Training</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="diet-plans" class="content-section">
+            <h2>Diet Plans</h2>
+            <p>Explore customized diet plans tailored to your fitness goals.</p>
+            <div class="cards">
+                <div class="card">
+                    <h3>Weight Loss Plan</h3>
+                    <p>A session to help you shed those extra kilos.contact us at : to book your individual session with coach akshit.</p>
+                </div>
+                <div class="card">
+                    <h3>Muscle Gain Plan</h3>
+                    <p>A session to gain muscle mass and enhanced recovery.contact us at : to book your individual session with coach akshit.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="training-sessions" class="content-section">
+            <h2>Training Sessions</h2>
+            <p>Join our professionally designed training sessions.</p>
+            <div class="cards">
+                <div class="card">
+                    <h3>Technical training</h3>
+                    <p>Improve your touch and technique.</p>
+                    <a class="btn" href="technical training.html" target="_blank">Lets go</a>
+                </div>
+                <div class="card">
+                    <h3>Strength Training</h3>
+                    <p>Enhance your power and endurance.</p>
+                    <a class="btn" href="strength training.html" target="_blank">Lets go</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="content-section">
+            <h2>Gallery</h2>
+            <p>A glimpse into the life of Coach Akshit.</p>
+            <div class="gallery">
+                <img src="p1.jpeg" alt="Coach Akshit">
+                <img src="p2.jpeg" alt="Coach Akshit">
+                <img src="IMG_9159.JPG" alt="Coach Akshit">
+                <img src="IMG_8857.JPG" alt="Coach Akshit">
+                <img src="IMG_8157.JPG" alt="Coach Akshit">
+                <img src="IMG_7236.JPG" alt="Coach Akshit">
+                <img src="IMG_6098.DNG" alt="Coach Akshit">
+                <img src="IMG_5903.DNG" alt="Coach Akshit">
+                <img src="IMG_5268.JPG" alt="Coach Akshit">
+                <img src="IMG_5239.DNG" alt="Coach Akshit">
+                <img src="IMG_5234.DNG" alt="Coach Akshit">
+                <img src="IMG_3203.JPG" alt="Coach Akshit">
+
+            </div>
+        </section>
+        <section id="gallery" class="content-section">
+            <h2>Certifications</h2>
+            <p>AIFF licenced coach</p>
+            <div class="gallery">
+                <img src="IMG_4189.JPG" alt="Coach Akshit">
+                <img src="IMG_4190.JPG" alt="Coach Akshit">
+            </div>
+        </section>
+
+        <section id="videos" class="content-section">
+            <h2>Videos</h2>
+            <p>Short videos from Coach Akshit.</p>
+            <div class="videos">
+                <div class="video-wrapper">
+                    <video autoplay muted loop playsinline>
+                        <source src="v1.MP4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-wrapper">
+                    <video autoplay muted loop playsinline>
+                        <source src="v2.MP4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2>About Coach Akshit Negi</h2>
+            <p>With years of experience, Coach Akshit specializes in transforming lives through tailored fitness
+                solutions.</p>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>Contact</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn">Send</button>
+            </form>
+        </section>
+    </main>
+    <section id="social-media" class="content-section">
+        <h2>Follow Coach Akshit</h2>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/coach_akshit?igsh=ZDVwOXJucnE4NjV4" target="_blank" class="social-icon instagram">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Coach Akshit Negi. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
